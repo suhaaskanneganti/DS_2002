@@ -78,7 +78,6 @@ LIMIT 10;
 -- ------------------------------------------------------------------ 
 -- 9). Count of Current and Discontinued Products 
 -- ------------------------------------------------------------------
-UPDATE northwind.products SET discontinued = 1 WHERE id=95;
 
 SELECT CASE discontinued
 			WHEN 1 THEN 'yes'
@@ -88,7 +87,6 @@ SELECT CASE discontinued
 FROM northwind.products
 GROUP BY discontinued;
 
-UPDATE northwind.products SET discontinued = 0 WHERE id=95;
 
 -- ------------------------------------------------------------------
 -- 10). Product Name, Units on Order and Units in Stock
